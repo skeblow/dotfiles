@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+    echo "No target selected"
+else
+    git checkout -b $1
+fi
