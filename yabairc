@@ -1,7 +1,7 @@
 yabai -m config layout                       bsp
 #!/usr/bin/env sh
 
-yabai -m config top_padding                  20
+yabai -m config top_padding                  35
 yabai -m config bottom_padding               20
 yabai -m config left_padding                 20
 yabai -m config right_padding                20
