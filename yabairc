@@ -1,8 +1,10 @@
-yabai -m config layout                       bsp
 #!/usr/bin/env sh
 
-yabai -m config top_padding                  35
-yabai -m config bottom_padding               20
-yabai -m config left_padding                 20
-yabai -m config right_padding                20
+yabai -m config layout                       bsp
+yabai -m config top_padding                  40
+yabai -m config bottom_padding               10
+yabai -m config left_padding                 15
+yabai -m config right_padding                15
 yabai -m config window_gap                   10
+
+yabai -m signal --add event="space_changed" action="~/.bin/uberrefresh"
