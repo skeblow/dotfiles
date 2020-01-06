@@ -99,7 +99,7 @@ alias q=exit
 alias c=clear
 alias net="ping google.cz"
 alias vim=nvim
-
+alias ..="cd .."
 export PATH="/usr/local/opt/php@7.2/bin:$PATH"
 export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 export LC_ALL=en_US.UTF-8

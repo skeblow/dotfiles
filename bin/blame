@@ -3,21 +3,25 @@
 all_lines=`find $1 -print`
 
 total_lines=0
-standa_lines=0
+stand_lines=0
 lubos_lines=0
 david_lines=0
+kille_lines=0
 
 for line in $all_lines;
 do
     if [ ! -d $line ]; then
 	total_lines=$[total_lines+`git blame $line | wc -l`]
-	standa_lines=$[standa_lines+`git blame $line | grep Standa | wc -l`]
+	stand_lines=$[stand_lines+`git blame $line | grep Standa | wc -l`]
 	lubos_lines=$[lubos_lines+`git blame $line | grep Lubom | wc -l`]
 	david_lines=$[david_lines+`git blame $line | grep David | wc -l`]
+	kille_lines=$[kille_lines+`git blame $line | grep Schli | wc -l`]
     fi
 done
 
 echo "total lines: $total_lines"
-echo "stand lines: $standa_lines"
+echo "stand lines: $stand_lines"
 echo "lubos lines: $lubos_lines"
 echo "david lines: $david_lines"
+echo "kille lines: $kille_lines"
+

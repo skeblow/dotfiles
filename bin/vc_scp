@@ -1,0 +1,10 @@
+#!/bin/bash
+
+function vc_up --description 'Upload file to VC production server'
+    if test -f "./$argv"
+        scp "./$argv" vc:"~/vasecocky.cz/current/$argv"
+    else
+        echo "File $argv not found"
+        return 0
+    end
+end
