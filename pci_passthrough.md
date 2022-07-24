@@ -26,15 +26,16 @@ done;
 
 ## setup vfio
 
+- into `/boot/loader/entries/arch-zen.conf` add `vfio-pci.ids=10de:13c2,10de:0fbb`
 - into `/etc/modprobe.d/vfio.conf` add `options vfio-pci ids=10de:13c2,10de:0fbb`
 - into `/etc/mkinitcpio.conf` add `vfio_pci vfio vfio_iommu_type1 vfio_virqfd` before any gpu drivers
 - in `/etc/mkinitcpio.conf` ensure that hooks have modconf `HOOKS=(... modconf ...)`
-- remove nvidia from `/etc/x11/xorg.conf`
-- blacklist nvidia in `/etc/modprobe.d/blacklist.conf` `blacklist nvidia nouveau`
 - run `mkinitcpio -P` to regenerate initramfs
 
 ## setup xorg
 
+- remove nvidia from `/etc/x11/xorg.conf`
+- blacklist nvidia in `/etc/modprobe.d/blacklist.conf` `blacklist nvidia nouveau`
 
 ## bios
 
