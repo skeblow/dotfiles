@@ -47,4 +47,9 @@ based on [this](https://stefanbauer.me/articles/my-phpstorm-settings-after-8-yea
 - status bar
 - navigation bar
 
+## help -> edit custom vm options
+
+`-Deditor.distraction.free.mode=true`
+
 ## shortcuts
+
